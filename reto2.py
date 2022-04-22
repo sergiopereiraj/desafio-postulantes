@@ -29,13 +29,3 @@ for i in range(156):
 data_json = json.dumps(lista)
 
 print(data_json)
-
-
-#     temporaly_data = {'No': ides[i].text ['RAZÓN SOCIAL': razonSociales[i].text, 'PAÍS': paises[i].text, 'DATOS INSCRIPCIÓN': datos[i].text, 'VIGENCIA HASTA': vigencias[i].text, 'DATOS ÚLTIMA ACTUALIZACIÓN':actualizaciones[i].text, 'ESTADO': estados[i].text]}
-
-# for estado in estados:
-#     print(estado.text)
-
-# soup = BeautifulSoup(driver.page_source, 'html.parser')
-
-# tables = soup.find_all('table')
