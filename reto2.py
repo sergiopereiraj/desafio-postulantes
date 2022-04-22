@@ -21,11 +21,11 @@ estados = driver.find_elements_by_xpath('//tbody/tr/td[7]')
 
 lista = []
 for i in range(156):
-    temporaly_data = {"No": ides[i].text, "RAZON SOCIAL": razonSociales[i].text, "PAIS": paises[i].text, "DATOS INSCRIPCION": datos[i].text, "VIGENCIA HASTA": vigencias[i].text, "DATOS ULTIMA ACTUALIZACION":actualizaciones[i].text, "ESTADO": estados[i].text}
+    temporaly_data = {"No": ides[i].text, "RAZÓN SOCIAL": razonSociales[i].text, "PAÍS": paises[i].text, "DATOS INSCRIPCIÓN": datos[i].text, "VIGENCIA HASTA": vigencias[i].text, "DATOS ÚLTIMA ACTUALIZACIÓN":actualizaciones[i].text, "ESTADO": estados[i].text}
     lista.append(temporaly_data)
 
 
 
-data_json = json.dumps(lista)
+data_json = json.dumps(lista, ensure_ascii=False)
 
 print(data_json)
