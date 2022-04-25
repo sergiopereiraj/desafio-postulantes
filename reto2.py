@@ -1,5 +1,5 @@
-from lib2to3.pgen2 import driver
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import json
 
@@ -11,13 +11,13 @@ driver.get(url)
 
 driver.maximize_window()
 
-ides = driver.find_elements_by_xpath('//tbody/tr/td[1]')
-razonSociales = driver.find_elements_by_xpath('//tbody/tr/td[2]')
-paises = driver.find_elements_by_xpath('//tbody/tr/td[3]')
-datos = driver.find_elements_by_xpath('//tbody/tr/td[4]')
-vigencias = driver.find_elements_by_xpath('//tbody/tr/td[5]')
-actualizaciones = driver.find_elements_by_xpath('//tbody/tr/td[6]')
-estados = driver.find_elements_by_xpath('//tbody/tr/td[7]')
+ides = driver.find_elements(By.XPATH,'//tbody/tr/td[1]')
+razonSociales = driver.find_elements(By.XPATH,'//tbody/tr/td[2]')
+paises = driver.find_elements(By.XPATH,'//tbody/tr/td[3]')
+datos = driver.find_elements(By.XPATH,'//tbody/tr/td[4]')
+vigencias = driver.find_elements(By.XPATH,'//tbody/tr/td[5]')
+actualizaciones = driver.find_elements(By.XPATH,'//tbody/tr/td[6]')
+estados = driver.find_elements(By.XPATH,'//tbody/tr/td[7]')
 
 lista = []
 for i in range(156):
